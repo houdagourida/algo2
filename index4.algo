@@ -1,0 +1,14 @@
+ALGORITHM w
+VAR
+    arr : ARRAY_OF INTEGER[];
+    n,p : INTEGER;
+
+BEGIN
+ arr[i]:=v
+ p:=i-1
+WHILE (p>0;arr[i]>v) DO
+ arr[p+1]=arr[p]
+ p:=p-1
+END WHILE
+ arr[p+1]=v
+END
