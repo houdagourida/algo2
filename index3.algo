@@ -1,7 +1,8 @@
-ALGORITHME produit_scalaire
+ALGORITHM produit_scalaire
 VAR
-    tableau v1 (3) : réel
-    tableau v2 (3) : réel
+
+  v1 : ARRAY_OF integer [50];
+  v2 : ARRAY_OF integer [50];
     i: INTEGER =0 ;
     p : réel
 BEGIN
@@ -16,7 +17,57 @@ BEGIN
    p:=0;
    FOR i FROM 0 TO 2 STEP 1  DO
    
-      p:=p+v1(i) * v2(i) 
+      p:=dotProduct(v1,v2)
     END_FOR  
     write("le produit scalaire des vecteurs v1 et v2 est :", p)
 END
+
+  var n = 3;
+   
+    // Function that return
+    // dot product of two vector array.
+
+    function dotProduct(v1:INTEGER, v2:INTEGER): INTEGER
+    {
+   
+        var product = 0;
+      BEGIN   
+        FOR i FROM 0 TO n-1 STEP 1  DO
+             product = product + vect_A[i] * vect_B[i];
+        END_FOR
+      return product;
+      END 
+    }
+   
+ 
+    PROCEDURE dot_product(v1:INTEGER,v2:INTEGER)
+    VAR
+       var product = 0;
+    BEGIN
+	    FOR i FROM 0 TO n-1 STEP 1  DO
+             product = product + vect_A[i] * vect_B[i];
+        END_FOR
+      
+    END
+    ALGORITHM produit_scalaire
+VAR
+
+  v1 : ARRAY_OF integer [50];
+  v2 : ARRAY_OF integer [50];
+    i: INTEGER =0 ;
+    x : INTEGER
+BEGIN
+  
+   p:=0;
+  FOR i FROM min TO max STEP step  DO
+      IF (dot_product(v1:INTEGER,v2:INTEGER)==0) THEN
+         write("les deux vecteur sont  orthogonaux")
+      ELSE
+       write("les deux vecteur ne sont pas  orthogonaux")
+          
+      END_IF
+  
+END
+   
+       
+             
